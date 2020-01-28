@@ -1,0 +1,21 @@
+nav {
+    postion: fixed;
+    height: 120px;
+    width: 100vw;
+    z-index: -1;
+    background-color: #4056A1;
+    color: #ffffff ;
+}
+
+.newTweet {
+    float: right;
+    padding-right: 1.5em;
+
+}
+
+.logo {
+    font-family:'Bungee';
+    padding-left: 1.5em;
+}
+
+
