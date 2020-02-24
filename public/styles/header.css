@@ -1,0 +1,16 @@
+header {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    background-color: blueviolet;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+    background-image: #0093a6;
+}
+
+.backdrop {
+    background-image: #0093a6;
+}
