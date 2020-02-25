@@ -27,4 +27,5 @@ input[type="submit"] {
     background-color: royalblue;
     float: left;
     font-family:'Bungee';
+    margin-bottom: 1em;
 }
