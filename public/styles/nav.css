@@ -5,11 +5,13 @@ nav {
     z-index: 99999;
     background-color: #4056A1;
     color: #ffffff ;
+    padding-top: 2.0em;
 }
 
 .newTweet {
     float: right;
     padding-right: 1.5em;
+    
 
 }
 
