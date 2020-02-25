@@ -24,11 +24,11 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- .container {
+  .container {
   width: 90vw;
   position: relative;
   margin: auto;
   display: grid;
- }
+}
 
 
