@@ -1,16 +1,13 @@
 header {
     height: 400px;
     width: 100%;
-    position: relative;
-    background-color: blueviolet;
+    background-color:#9c6aa1;
+    background-image: url("https://www.transparenttextures.com/patterns/textured-stripes.png");
+
 }
 
 .center {
     display: grid;
     place-items: center;
-    background-image: #0093a6;
-}
-
-.backdrop {
-    background-image: #0093a6;
+    position: relative;
 }
