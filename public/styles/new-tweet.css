@@ -7,12 +7,17 @@
     font-family:'Bungee';
 }
 
+.overlimit{
+    color: red;
+}
+  
+
 textarea {
     background: transparent;
     border: 0;
     outline: 0;
     resize: none;
-    height: 1.8em;
+    height: 5%;
     width: 100%;
     border-bottom: solid;
     font-weight: bold;
