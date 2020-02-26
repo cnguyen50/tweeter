@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
     
     
     <!-- External JS -->
@@ -29,6 +31,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     
+    <script src="./scripts/composer-char-counter.js"></script>
   </head>
 
 
@@ -60,11 +63,28 @@
           <span class="counter">140</span>
         </form>
       </section>
+
+      <section class="tweets-container">
+        <article class="tweet">
+          <header>
+            <div class="user-info">
+              <img id="avatar" src="/images/profile-hex.png">
+              <h4 class="user-header-name">Calvin</h4>
+            </div>
+            <h5 class="user-header-pad">@cnguyen50</h5>
+          </header>
+          <p>Example tweet right here</p>
+          <footer>
+            <span class="date"> posted 10 days ago</span>
+          </footer>
+        </article>
+      </section>
+
       <div>
         Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...
       </div>
     </main>
-  
+    <!-- <script src="./scripts/composer-char-counter.js"></script> -->
   </body>
 
 </html>
