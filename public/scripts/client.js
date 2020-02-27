@@ -81,8 +81,13 @@ $(() => {
                     <h5 class="user-header-pad">${handle}</h5>
                 </header>
                     <p>${escape(content)}</p>
-                <footer>
-                    <span class="date">${createdAt}</span>
+                <footer id="details">
+                    <span>${createdAt}</span>
+                    <div>
+                    <i class="fab fa-font-awesome-flag"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-retweet"></i>
+                    </div>
                 </footer>
             </article>
         `;
