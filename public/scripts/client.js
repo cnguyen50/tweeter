@@ -21,12 +21,12 @@ $(() => {
     const characterLength = $("textarea").val().length;
 
     if (characterLength > 140) {
-      error.slideDown().text("😡OVER 140 CHARACTERS😡");
+      error.slideDown().text("‼️😡OVER 140 CHARACTERS😡‼️");
       return
     }
 
     if (characterLength === 0) {
-      error.slideDown().text("🥱plz try again🥱");
+      error.slideDown().text("😬plz try again😬");
       return
 
     } else {
@@ -40,8 +40,16 @@ $(() => {
           // console.log("CREATED NEW TWEET");
         })
     }
-
   });
+
+  const $post = $(".slide-tweet");
+  $post.on("click", (event) => {
+    console.log("WRITING NEW TWEET")
+    event.preventDefault();
+
+    $(".new-tweet").slideToggle();
+
+  })
 
 
 
@@ -94,6 +102,8 @@ $(() => {
   };
   // renderTweets(data);
   loadtweets();
+
+  
 });
 
 
