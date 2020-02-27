@@ -56,6 +56,11 @@ $(() => {
   }
 
 
+  const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 
     
@@ -75,7 +80,7 @@ $(() => {
                     </div>
                     <h5 class="user-header-pad">${handle}</h5>
                 </header>
-                    <p>${content}</p>
+                    <p>${escape(content)}</p>
                 <footer>
                     <span class="date">${createdAt}</span>
                 </footer>
