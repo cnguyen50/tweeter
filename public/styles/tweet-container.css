@@ -56,9 +56,7 @@ p {
     padding: 15px;
     border-bottom: solid;
 }
-.date {
-    padding-left: 10px;
-}
+
 
 article:hover h5 {
     display: inline-block;
@@ -69,4 +67,10 @@ div#error-message {
     text-align: center;
     border: solid red;
     display: none;
+}
+
+
+#details {
+    display: flex;
+    justify-content: space-between;
 }
