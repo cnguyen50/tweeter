@@ -1,4 +1,3 @@
-
 article header {
     display: flex;
     height: 30%;
@@ -63,4 +62,11 @@ p {
 
 article:hover h5 {
     display: inline-block;
+}
+
+div#error-message {
+    color: red;
+    text-align: center;
+    border: solid red;
+    display: none;
 }
