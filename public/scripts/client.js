@@ -28,12 +28,36 @@ const data = [
     "created_at": 1461113959088
   }
 ];
+
 $(() => {
   const renderTweets = (tweetsArr) => {
     tweetsArr.forEach(data => {
       $('.tweets-container').append(createTweetElement(data));
-    });
-  };
+    })};
+    
+  const $button = $("#tweet-form");
+  $button.on('submit', function () {
+  console.log("listening here", $button.serialize());
+  event.preventDefault();
+  $.ajax({
+    url: "/tweets",
+    method: "POST",
+    data: $button.serialize() 
+  })
+    .then(function () {
+      console.log("CREATED NEW TWEET");
+    })
+    
+    
+    
+
+
+
+
+  });
+
+
+
     
   const createTweetElement = function(tweetData) {
     const name = tweetData.user.name;
@@ -58,9 +82,16 @@ $(() => {
             </article>
         `;
   };
-    
-    
   renderTweets(data);
 });
+
+
+
+
+
+
+
+
+
 
 
