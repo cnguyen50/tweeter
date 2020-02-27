@@ -7,23 +7,43 @@
 
 $(() => {
   const renderTweets = (tweetsArr) => {
+    $(".tweets-container").empty();
     tweetsArr.forEach(data => {
-      $('.tweets-container').append(createTweetElement(data));
+      $(".tweets-container").prepend(createTweetElement(data));
     })};
     
   const $button = $("#tweet-form");
-  $button.on('submit', () => {
+  $button.on("submit", () => {
     console.log("listening here", $button.serialize());
     event.preventDefault();
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      data: $button.serialize() 
-    })
-      .then(function () {
-        console.log("CREATED NEW TWEET");
+
+    let error = $("#error-message");
+    const characterLength = $("textarea").val().length;
+
+    if (characterLength > 140) {
+      error.slideDown().text("😡OVER 140 CHARACTERS😡");
+      return
+    }
+
+    if (characterLength === 0) {
+      error.slideDown().text("🥱plz try again🥱");
+      return
+
+    } else {
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: $button.serialize() 
       })
+        .then(function() {
+          loadtweets();
+          // console.log("CREATED NEW TWEET");
+        })
+    }
+
   });
+
+
 
   const loadtweets = function() {
     $.ajax({
@@ -34,6 +54,8 @@ $(() => {
         renderTweets(tweets);
     });
   }
+
+
 
 
     
