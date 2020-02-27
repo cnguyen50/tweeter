@@ -17,6 +17,7 @@ article.tweet:hover {
 
 
 .tweets-container {
+
     min-height: 100px;
     background-color:whitesmoke;
 }
@@ -27,6 +28,7 @@ article.tweet:hover {
 .tweet {
     padding: 1.3em;
     border: solid 3px gray;
+    border-radius: 10px;
     margin: 1em;
 }
 
@@ -51,6 +53,7 @@ article.tweet:hover {
 
 
 p {
+    word-break: break-all;
     min-height: 50px;
     font-size: 20px;
     padding: 15px;
