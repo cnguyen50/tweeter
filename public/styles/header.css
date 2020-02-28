@@ -3,13 +3,38 @@ header {
     width: 100%;
     background-color:#9c6aa1;
     background-image: url("https://www.transparenttextures.com/patterns/textured-stripes.png");
+    
 
 }
 
+.top {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 2em;
 
-
-.center {
-    display: grid;
-    place-items: center;
-    position: relative;
 }
+
+/* display */
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        display: flex;
+        margin: 0em 1em ;
+    }
+
+    .new-tweet {
+        width: 93%;
+        margin: auto;
+    }
+
+    .top {
+        margin: 1em;
+        margin-top: 140px;
+        width: 55%;
+    }
+
+    .new-tweet {
+        padding-top: 110px;
+    }
+} 
+
