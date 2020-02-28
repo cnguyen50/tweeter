@@ -98,7 +98,7 @@ $(() => {
                     <p>${escape(content)}</p>
                 <footer id="details">
                     <span>${createdAt}</span>
-                    <div>
+                    <div class="hover-icon">
                     <i class="fab fa-font-awesome-flag"></i>
                     <i class="fas fa-heart"></i>
                     <i class="fas fa-retweet"></i>

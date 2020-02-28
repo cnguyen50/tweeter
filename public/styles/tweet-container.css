@@ -52,6 +52,9 @@ article.tweet:hover {
     margin-top: 12px;
 }
 
+.hover-icon {
+    display:none;
+}
 
 p {
     word-break: break-all;
@@ -63,6 +66,10 @@ p {
 
 
 article:hover h5 {
+    display: inline-block;
+}
+
+article:hover .hover-icon {
     display: inline-block;
 }
 
