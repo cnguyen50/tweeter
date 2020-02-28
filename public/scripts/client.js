@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 $(() => {
   //refetching tweets after submission
   const renderTweets = (tweetsArr) => {
@@ -14,7 +13,7 @@ $(() => {
     });
   };
   
-  //tweet button
+  //tweet form submission
   $(".new-tweet").hide();
   const $button = $("#tweet-form");
   $button.on("submit", () => {
@@ -29,15 +28,11 @@ $(() => {
         .text("‼️😡OVER 140 CHARACTERS😡‼️")
         .delay(2000)
         .slideUp();
-      return;
-    }
-
-    if (characterLength === 0) {
+    } else if (characterLength === 0) {
       error.slideDown()
         .text("😬plz try again😬")
         .delay(2000)
         .slideUp();
-      return;
 
     //if form submission is successfull then makes request and load tweets
     } else { 
@@ -48,17 +43,19 @@ $(() => {
       })
         .then(function() {
           loadtweets();
+          $("textarea").val("");
         });
     }
   });
 
   //click event for arrow animation
-  // $( ".slide-tweet" ).hide();
   const $post = $(".slide-tweet");
   $post.on("click", (event) => {
     event.preventDefault();
 
-    $(".new-tweet").slideToggle();
+    $(".new-tweet").slideToggle({complete: function(){
+      $("textarea").focus();
+    }});
   });
 
 
