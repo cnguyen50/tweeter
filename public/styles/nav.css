@@ -1,25 +1,50 @@
 nav {
-    postion: fixed;
-    height: 120px;
+    position: fixed;
+    height: 110px;
     width: 100vw;
     z-index: 99999;
     background-color: #4056A1;
     color: #ffffff ;
     padding: 2em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .slide-tweet {
     position: relative;
     display: inline-block;
-    float: right;
 }
 
 .logo {
     font-family:'Bungee';
 }
+/* mobile style */
+@media only screen and (min-width: 775px) and (max-width: 1024px) {
+    nav {
+        background: none;
+    }
+
+}
+
+@media only screen and (max-width: 774px) {
+    header.top {
+        padding: 5em 0 0em;
+        box-sizing: content-box;
+    }
+    
+    nav {
+        background:none
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+}
 
 
-/// ==================
+
+/* arrow animation */
 
 @-webkit-keyframes pulse {
     0% {
