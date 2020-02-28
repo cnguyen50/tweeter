@@ -2,7 +2,7 @@ article header {
     display: flex;
     height: 30%;
     width: 100%;
-    background-color:whitesmoke;
+    background-color:#d9d9d9;
     background-image: none;
     justify-content: space-between;
 
@@ -19,10 +19,11 @@ article.tweet:hover {
 .tweets-container {
 
     min-height: 100px;
-    background-color:whitesmoke;
+    background-color: #d9d9d9;
 }
 #avatar {
     height: 60px;
+    margin-right: 0.5em;
 }
 
 .tweet {
