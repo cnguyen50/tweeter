@@ -15,6 +15,7 @@ $(() => {
   };
   
   //tweet button
+  $(".new-tweet").hide();
   const $button = $("#tweet-form");
   $button.on("submit", () => {
     event.preventDefault();
@@ -52,6 +53,7 @@ $(() => {
   });
 
   //click event for arrow animation
+  // $( ".slide-tweet" ).hide();
   const $post = $(".slide-tweet");
   $post.on("click", (event) => {
     event.preventDefault();
