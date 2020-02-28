@@ -6,18 +6,20 @@
 
 
 $(() => {
+  //refetching tweets after submission
   const renderTweets = (tweetsArr) => {
     $(".tweets-container").empty();
     tweetsArr.forEach(data => {
       $(".tweets-container").prepend(createTweetElement(data));
     });
   };
-    
+  
+  //tweet button
   const $button = $("#tweet-form");
   $button.on("submit", () => {
-    console.log("listening here", $button.serialize());
     event.preventDefault();
 
+    //handling error if textarea length empty or over 140 characters
     let error = $("#error-message");
     const characterLength = $("textarea").val().length;
 
@@ -36,7 +38,8 @@ $(() => {
         .slideUp();
       return;
 
-    } else {
+    //if form submission is successfull then makes request and load tweets
+    } else { 
       $.ajax({
         url: "/tweets",
         method: "POST",
@@ -44,22 +47,20 @@ $(() => {
       })
         .then(function() {
           loadtweets();
-          // console.log("CREATED NEW TWEET");
         });
     }
   });
 
+  //click event for arrow animation
   const $post = $(".slide-tweet");
   $post.on("click", (event) => {
-    console.log("WRITING NEW TWEET");
     event.preventDefault();
 
     $(".new-tweet").slideToggle();
-
   });
 
 
-
+  // makes ajax request and renders tweets
   const loadtweets = function() {
     $.ajax({
       url: "/tweets",
@@ -70,7 +71,7 @@ $(() => {
       });
   };
 
-
+//prevents XSS by escaping
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -78,7 +79,7 @@ $(() => {
   };
 
 
-    
+  // creates new tweet with template
   const createTweetElement = function(tweetData) {
     const name = tweetData.user.name;
     const avatars = tweetData.user.avatars;
@@ -107,10 +108,7 @@ $(() => {
             </article>
         `;
   };
-  // renderTweets(data);
   loadtweets();
-
-  
 });
 
 
