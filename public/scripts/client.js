@@ -53,7 +53,7 @@ $(() => {
   $post.on("click", (event) => {
     event.preventDefault();
 
-    $(".new-tweet").slideToggle({complete: function(){
+    $(".new-tweet").slideToggle({complete: function() {
       $("textarea").focus();
     }});
   });
